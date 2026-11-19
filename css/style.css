@@ -272,7 +272,10 @@ h3 { font-size: 1.02rem; font-weight: 700; letter-spacing: -.01em; }
    Finitions professionnelles
    Typographie plus posée, couleurs plus sobres, composants unifiés.
    ========================================================= */
-:root { --ink: #111827; --muted: #5B6472; --line: #E6E9EE; }
+:root { --ink: #111827; --muted: #5B6472; --line: #E3E7EC; --bg: #F1F4F7; }
+/* Fond moins éclatant : gris bleuté très doux ; les cartes restent blanches pour ressortir */
+.top { background: rgba(241, 244, 247, .9); }
+.section-white { background: #F8F9FB; }
 body { text-rendering: optimizeLegibility; font-feature-settings: "cv11", "ss03"; }
 
 /* Typographie : graisses moins lourdes, approches homogènes */
