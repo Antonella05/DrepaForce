@@ -268,6 +268,65 @@ h3 { font-size: 1.02rem; font-weight: 700; letter-spacing: -.01em; }
 .reveal { transition: opacity .6s ease, transform .6s ease; }
 .js .reveal:not(.in) { opacity: 0; transform: translateY(14px); }
 
+/* =========================================================
+   Finitions professionnelles
+   Typographie plus posée, couleurs plus sobres, composants unifiés.
+   ========================================================= */
+:root { --ink: #111827; --muted: #5B6472; --line: #E6E9EE; }
+body { text-rendering: optimizeLegibility; font-feature-settings: "cv11", "ss03"; }
+
+/* Typographie : graisses moins lourdes, approches homogènes */
+h1, .stage { font-weight: 700; letter-spacing: -.035em; }
+h2 { font-weight: 700; letter-spacing: -.025em; line-height: 1.18; }
+.story-step h3, .who-q, .facts b, .partners b, .cta h2 { font-weight: 700; }
+.lead, .intro { color: var(--muted); line-height: 1.65; }
+.punch { font-weight: 600; }
+
+/* Repères de section : petites capitales espacées */
+.split-label, .profiles-title { border-top-width: 1px; font-size: .7rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+.num-label { font-size: .7rem; letter-spacing: .09em; }
+.crew-label { font-weight: 600; letter-spacing: .09em; }
+
+/* Boutons : plus nets, sans effet de saut */
+.btn { border-radius: 10px; font-weight: 600; box-shadow: 0 1px 2px rgba(16, 24, 40, .06); }
+.btn:hover { transform: none; }
+.btn-blue:hover { box-shadow: 0 4px 14px -4px rgba(39, 134, 220, .55); }
+.btn-line { border-width: 1px; }
+.badge { border: 1px solid rgba(39, 134, 220, .2); font-weight: 500; }
+
+/* Cartes et panneaux : même rayon, bordure fine, ombre discrète */
+.vessels, .who-panel { border-radius: 14px; box-shadow: 0 1px 2px rgba(16, 24, 40, .04); }
+.who-panel { background: var(--white); border: 1px solid var(--line); }
+.notif { border-radius: 14px; }
+.vx-tag { border-radius: 4px; }
+
+/* Constat : chiffres en rouge sur un filet neutre */
+.facts li { border-top: 1px solid var(--line); }
+.facts b { color: var(--red); }
+
+/* Application : pastilles neutres */
+.chips li, .story-step:nth-of-type(3) .chips li { background: #F3F4F6; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; font-weight: 500; }
+
+/* « Je suis… » : contrôle segmenté sobre */
+.who-tabs { gap: 4px; padding: 4px; border-radius: 10px; background: #F1F3F6; }
+.who-tabs button { padding: 6px 14px; border: 0; border-radius: 7px; color: var(--muted); font-weight: 600; }
+.who-tabs button:hover { color: var(--ink); }
+.who-tabs button[aria-selected="true"] { border: 0; background: var(--white); color: var(--red); box-shadow: 0 1px 3px rgba(16, 24, 40, .14); }
+
+/* Bandeau terrain : bleu de la marque, un ton plus profond */
+.band { background: linear-gradient(135deg, #2279CC 0%, #1A62AC 100%); }
+.band[data-online="false"] { background: var(--navy); }
+.ok { font-weight: 600; }
+
+/* Équipe : initiales dans un cercle */
+.avatar { width: 38px; height: 38px; padding-top: 0; border-radius: 50%; -webkit-mask: none; mask: none; font-size: .72rem; }
+
+/* Contact : goutte de fond plus discrète */
+.cta-drop { opacity: .28; }
+
+/* Effet curseur plus léger */
+.cursor-glow { --dot: rgba(210, 2, 17, .22); --halo: rgba(39, 134, 220, .06); }
+
 /* ---------- Tablette ---------- */
 @media (max-width: 960px) {
   .hero-in { min-height: 0; }
